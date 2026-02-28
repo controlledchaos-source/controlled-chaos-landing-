@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your ads suck. Probably not your fault. AI videos + Meta ads for home remodeling contractors.">
+    <meta name="keywords" content="contractor marketing, AI video, Meta ads, home remodeling leads">
+    <title>Controlled Chaos Club — AI Videos + Leads</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0a0e1f;
+            --secondary: #131929;
+            --accent: #d4af37;
+            --accent-light: #e8b923;
+            --text-primary: #ffffff;
+            --text-secondary: #b8c5d6;
+            --text-tertiary: #8a98b0;
+            --border: #1f2d42;
+            --success: #10b981;
+            --danger: #ef4444;
+            --bg-dark: #060a14;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--primary);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 14, 31, 0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 0.75rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-nav {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+
+        .logo-nav img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 2px solid;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+            border-color: var(--accent);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-light);
+            border-color: var(--accent-light);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.35);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 2rem;
+        }
+
+        section.alt {
+            background: var(--secondary);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* ============= HERO ============= */
+        .hero {
+            padding: 5rem 2rem;
+            background: var(--primary);
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .logo-banner {
+            margin-bottom: 3rem;
+        }
+
+        .logo-banner img {
+            max-width: 180px;
+            height: auto;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .hero h1 .accent {
+            color: var(--accent);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero-subtitle {
+                font-size: 0.95rem;
+            }
+            .cta-buttons {
+                flex-direction: column;
+            }
+            .cta-buttons .btn {
+                width: 100%;
+            }
+        }
+
+        /* ============= SECTION HEADERS ============= */
+        .section-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ============= THE PROBLEM SECTION ============= */
+        .problem-section {
+            background: var(--secondary);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .problem-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .problem-intro strong {
+            color: var(--accent);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* CHAOTIC PROBLEM GRID - Bad Examples */
+        .problem-grid {
+            position: relative;
+            height: 600px;
+            margin-bottom: 4rem;
+        }
+
+        .bad-example {
+            position: absolute;
+            width: 200px;
+            height: 250px;
+            background: rgba(239, 68, 68, 0.15);
+            border: 2px dashed rgba(239, 68, 68, 0.5);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-tertiary);
+            font-size: 3rem;
+            filter: blur(2px);
+            transform: rotate(var(--rotate)) scale(var(--scale));
+            opacity: 0.8;
+        }
+
+        .bad-example:nth-child(1) {
+            top: 0%;
+            left: 5%;
+            --rotate: -15deg;
+            --scale: 0.9;
+        }
+
+        .bad-example:nth-child(2) {
+            top: 10%;
+            right: 10%;
+            --rotate: 8deg;
+            --scale: 1;
+        }
+
+        .bad-example:nth-child(3) {
+            top: 30%;
+            left: 25%;
+            --rotate: -20deg;
+            --scale: 0.85;
+        }
+
+        .bad-example:nth-child(4) {
+            top: 25%;
+            right: 20%;
+            --rotate: 12deg;
+            --scale: 0.95;
+        }
+
+        .bad-example:nth-child(5) {
+            bottom: 10%;
+            left: 10%;
+            --rotate: -8deg;
+            --scale: 0.9;
+        }
+
+        .bad-example:nth-child(6) {
+            bottom: 5%;
+            right: 15%;
+            --rotate: 18deg;
+            --scale: 1;
+        }
+
+        .bad-example:nth-child(7) {
+            top: 45%;
+            left: 50%;
+            --rotate: -5deg;
+            --scale: 0.88;
+            transform: translateX(-50%) rotate(var(--rotate)) scale(var(--scale));
+        }
+
+        .bad-example:nth-child(8) {
+            bottom: 25%;
+            right: 5%;
+            --rotate: 15deg;
+            --scale: 0.92;
+        }
+
+        .problem-bullets {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .problem-bullet {
+            flex: 1;
+            min-width: 150px;
+            background: rgba(239, 68, 68, 0.08);
+            border-left: 4px solid rgba(239, 68, 68, 0.6);
+            padding: 1.5rem;
+            border-radius: 2px;
+            text-align: center;
+        }
+
+        .problem-bullet strong {
+            color: var(--danger);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .problem-bullet p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        /* ============= REALITY SECTION ============= */
+        .reality-section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .reality-statement {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+        }
+
+        .reality-visual {
+            font-size: 5rem;
+            margin: 2rem 0;
+        }
+
+        /* ============= WHAT WE DO ============= */
+        .what-we-do {
+            padding: 4rem 2rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ============= HOW IT WORKS ============= */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .process-step:hover {
+            border-color: var(--accent);
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .process-step h4 {
+            font-size: 1rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .process-step p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        /* ============= PORTFOLIO SECTION ============= */
+        .portfolio-section {
+            padding: 5rem 2rem;
+            background: var(--secondary);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .portfolio-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .portfolio-title h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 0.75rem;
+        }
+
+        .portfolio-title p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+
+        .portfolio-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .portfolio-video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--text-tertiary);
+        }
+
+        .portfolio-item iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .portfolio-desc {
+            padding: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        /* ============= PRICING ============= */
+        .pricing-section {
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--accent);
+            padding: 3rem;
+            border-radius: 6px;
+            max-width: 550px;
+            margin: 2rem auto 0;
+        }
+
+        .price-display {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-period {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .pricing-features li {
+            list-style: none;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .pricing-features li:before {
+            content: "✓";
+            color: var(--success);
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+
+        .being-real {
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            padding: 1.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .being-real strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        /* ============= FAQ ============= */
+        .faq-section {
+            padding: 5rem 2rem;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .faq-question h4 {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .faq-toggle {
+            color: var(--accent);
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(255, 255, 255, 0.01);
+        }
+
+        .faq-answer.open {
+            max-height: 600px;
+        }
+
+        .faq-answer p {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.9rem;
+        }
+
+        /* ============= FINAL CTA ============= */
+        .final-cta {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(16, 185, 129, 0.08));
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            text-align: center;
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+
+        .final-cta h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .final-cta p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* ============= FOOTER ============= */
+        footer {
+            background: var(--bg-dark);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-tertiary);
+            font-size: 0.85rem;
+        }
+
+        footer p {
+            margin-bottom: 0.75rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo-nav">
+                <img src="logo.jpg" alt="Controlled Chaos">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#portfolio">Work</a></li>
+                <li><a href="#how">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============= HERO ============= -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="logo-banner">
+                <img src="logo.jpg" alt="Controlled Chaos Club Logo">
+            </div>
+            
+            <h1>Your Ads Suck.<br><span class="accent">Probably Not Your Fault.</span></h1>
+            <p class="hero-subtitle">AI videos + managed Meta ads. Real leads. Real results. $2k/month.</p>
+            
+            <div class="cta-buttons">
+                <a href="https://calendly.com/brett-controlledchaos/15min" target="_blank" class="btn btn-primary">Book a Call</a>
+                <a href="#portfolio" class="btn btn-secondary">See Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= THE PROBLEM ============= -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Be Honest</h2>
+                <p class="section-subtitle">This is what most contractors post</p>
+            </div>
+
+            <p class="problem-intro">
+                <strong>Blurry. Bad angles. Inconsistent lighting.</strong>
+                Your competitors' ads look unprofessional. Yours don't have to.
+            </p>
+
+            <!-- CHAOTIC BAD EXAMPLES -->
+            <div class="problem-grid">
+                <div class="bad-example">📷</div>
+                <div class="bad-example">📷</div>
+                <div class="bad-example">📷</div>
+                <div class="bad-example">📷</div>
+                <div class="bad-example">📷</div>
+                <div class="bad-example">📷</div>
+                <div class="bad-example">📷</div>
+                <div class="bad-example">📷</div>
+            </div>
+
+            <!-- PROBLEM CALLOUTS -->
+            <div class="problem-bullets">
+                <div class="problem-bullet">
+                    <strong>Blurry</strong>
+                    <p>Phone camera footage screams "unprofessional"</p>
+                </div>
+                <div class="problem-bullet">
+                    <strong>Bad Lighting</strong>
+                    <p>Can't see what you actually did</p>
+                </div>
+                <div class="problem-bullet">
+                    <strong>No Strategy</strong>
+                    <p>Just posting to post</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= THE REALITY ============= -->
+    <section class="reality-section">
+        <div class="container">
+            <p class="reality-statement">
+                <strong style="color: var(--accent); font-size: 1.1rem;">Professional videos convert.</strong>
+                Homeowners trust you when they SEE the work. Not when they read about it.
+            </p>
+            <div class="reality-visual">✨</div>
+        </div>
+    </section>
+
+    <!-- ============= WHAT WE DO ============= -->
+    <section class="what-we-do alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What We Do</h2>
+            </div>
+
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎬</div>
+                    <h3>Professional Videos</h3>
+                    <p>AI-powered before/afters, testimonials, and ad creative. You approve. We deliver in 48 hours.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Ad Management</h3>
+                    <p>We build, launch, and optimize your Meta ads 24/7. Daily testing. Real ROI.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📞</div>
+                    <h3>Qualified Leads</h3>
+                    <p>Homeowners ready to hire. Delivered daily. You close. We optimize.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= HOW IT WORKS ============= -->
+    <section id="how" class="alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">4 steps. Less than a week.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-icon">📞</div>
+                    <h4>Call</h4>
+                    <p>Tell us your business. We listen.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">🎬</div>
+                    <h4>Videos</h4>
+                    <p>We create. You approve.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">🚀</div>
+                    <h4>Launch</h4>
+                    <p>Ads go live. In 48 hours.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">📊</div>
+                    <h4>Results</h4>
+                    <p>Leads arrive. You close.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= PORTFOLIO ============= -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-title">
+                <h2>Here's What Professional Looks Like</h2>
+                <p>Real before/afters. Real results. Real contractors.</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-video">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Bathroom Remodel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="portfolio-desc">
+                        <strong>Bathroom Remodel</strong> — Denver, CO. 8 leads in 2 weeks.
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-video">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Kitchen Remodel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="portfolio-desc">
+                        <strong>Kitchen Remodel</strong> — Austin, TX. 12 leads in 3 weeks.
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-video">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Flooring Installation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="portfolio-desc">
+                        <strong>Flooring Installation</strong> — Nashville, TN. $21 CPL.
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-video">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Full Home Remodel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="portfolio-desc">
+                        <strong>Full Home Remodel</strong> — Atlanta, GA. 3.2x ROAS.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= PRICING ============= -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Package</h2>
+                <p class="section-subtitle">One price. Everything included.</p>
+            </div>
+
+            <div class="pricing-card">
+                <div class="price-display">$2,000</div>
+                <div class="price-period">per month + your ad budget</div>
+
+                <ul class="pricing-features">
+                    <li><strong>10 Professional Videos</strong> — Before/afters, testimonials, ad creative</li>
+                    <li><strong>Full Ad Management</strong> — Build, launch, optimize daily</li>
+                    <li><strong>Qualified Leads</strong> — Delivered daily to your phone</li>
+                    <li><strong>Dashboard Access</strong> — CPL, ROAS, everything real-time</li>
+                    <li><strong>Dedicated Support</strong> — We answer. We solve.</li>
+                    <li><strong>Month to Month</strong> — No contracts. Leave whenever.</li>
+                </ul>
+
+                <div class="being-real">
+                    <strong>Being Real:</strong> Price goes up as we prove results. We're new. We're hungry. Start here, prove ROI, we scale together.
+                </div>
+
+                <a href="https://calendly.com/brett-controlledchaos/15min" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 2rem;">Book Your Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= FAQ ============= -->
+    <section id="faq" class="faq-section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Questions?</h2>
+                <p class="section-subtitle">Real answers.</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
+                        <h4>How long before I see leads?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>3-7 days. We test small, scale when we hit good CPL. Patience matters here.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
+                        <h4>Can I control my budget?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>100% yes. You set daily spend. We optimize within it. Most contractors start $20-30/day.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
+                        <h4>What if I hate the videos?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Unlimited revisions. We keep going until you're happy. That's non-negotiable.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
+                        <h4>Month to month really?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. No contracts. No penalty. Leave whenever. (But you won't.)</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
+                        <h4>30-day guarantee?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yep. 30 days. No leads? Full refund. But you gotta actually run the ads and give it a real shot.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
+                        <h4>What's your success rate?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>3 for 3 right now. Every contractor we've worked with got leads. We're selective though. Not the right fit? We'll tell you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= FINAL CTA ============= -->
+    <section>
+        <div class="container">
+            <div class="final-cta">
+                <h3>Your Competitors Are Sleeping.</h3>
+                <p>You don't have to be. Let's talk about your business, your goals, what's actually broken with your ads. No pitch.</p>
+                <a href="https://calendly.com/brett-controlledchaos/15min" target="_blank" class="btn btn-primary">Book Your Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><strong>Controlled Chaos Club</strong></p>
+        <p>AI Videos + Managed Meta Ads for Home Remodeling Contractors</p>
+        <p style="margin-top: 1rem;">
+            <a href="mailto:brett@controlledchaos.club">brett@controlledchaos.club</a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">
+            © 2025. New. Hungry. We give a shit.
+        </p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const toggle = question.querySelector('.faq-toggle');
+                
+                document.querySelectorAll('.faq-answer').forEach(a => {
+                    if (a !== answer) {
+                        a.classList.remove('open');
+                        a.previousElementSibling.querySelector('.faq-toggle').textContent = '+';
+                    }
+                });
+                
+                answer.classList.toggle('open');
+                toggle.textContent = answer.classList.contains('open') ? '−' : '+';
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.getAttribute('target') !== '_blank') {
+                    e.preventDefault();
+                    const target = document.querySelector(link.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
